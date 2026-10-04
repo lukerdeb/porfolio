@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luke Joshua Cahinusayan | QA Tester & Front-End Developer</title>
+<meta name="description" content="Computer Science student building apps and breaking them on purpose. Seeking a QA / Software Tester internship starting December 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F2F5F7; --surface:#FFFFFF; --ink:#13202B; --muted:#52606D; --line:#D5DDE3;
+  --accent:#0B6E6E; --pass:#15803D; --fail:#B93815;
+  --display:"Bricolage Grotesque",Georgia,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0E1820;--surface:#16232D;--ink:#E8EEF2;--muted:#9AABB8;--line:#2A3b47;--accent:#4FD1C5;--pass:#4ADE80;--fail:#FB923C}
+}
+:root[data-theme="dark"]{--bg:#0E1820;--surface:#16232D;--ink:#E8EEF2;--muted:#9AABB8;--line:#2A3b47;--accent:#4FD1C5;--pass:#4ADE80;--fail:#FB923C}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:880px;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 0;font-weight:500}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+h1{font-size:clamp(2.6rem,8vw,4.8rem);font-weight:800;letter-spacing:-.03em;max-width:14ch}
+h2{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1.25rem}
+h3{font-size:1.3rem;font-weight:700}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.hero{padding:3rem 0 4rem;border:0}
+.role{color:var(--muted);font-size:1.15rem;margin:1.25rem 0 2rem;max-width:52ch}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.25rem;max-width:520px;font:500 .95rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+.panel p{margin:0 0 .6rem;color:var(--muted)}
+.t{display:flex;gap:.75rem;opacity:0;animation:in .4s forwards}
+.t:nth-of-type(1){animation-delay:.3s}.t:nth-of-type(2){animation-delay:.8s}.t:nth-of-type(3){animation-delay:1.3s}.t:nth-of-type(4){animation-delay:1.8s}.t:nth-of-type(5){animation-delay:2.3s}
+.ok{color:var(--pass);font-weight:700}
+.bug{color:var(--fail);font-weight:700}
+@keyframes in{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.t{animation:none;opacity:1}html{scroll-behavior:auto}}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem;margin-bottom:1.25rem}
+.proj .meta{color:var(--muted);font-size:.95rem;margin:.25rem 0 1rem}
+.proj ul{margin:0;padding-left:1.2rem}
+.proj li{margin-bottom:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.chip{border:1px solid var(--line);border-radius:999px;padding:.15rem .75rem;font-size:.9rem;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.skills h3{font-size:1.05rem;margin-bottom:.5rem}
+.skills p{margin:0;color:var(--muted)}
+.edu{margin-bottom:1.5rem}
+.edu p{margin:.2rem 0;color:var(--muted)}
+footer{padding:3rem 0 4rem;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Luke Joshua Cahinusayan</h1>
+    <p class="role">Computer Science student building apps, then trying to break them. Aspiring Software QA Tester and Front-End Developer based in Lucena City, Philippines.</p>
+    <div class="panel" role="img" aria-label="Sample test run: five checks, four pass and one bug found">
+      <p>$ run checks: mseuf-wear</p>
+      <div class="t"><span class="ok">PASS</span><span>product list loads</span></div>
+      <div class="t"><span class="ok">PASS</span><span>add item to cart</span></div>
+      <div class="t"><span class="bug">BUG </span><span>empty cart shows blank screen</span></div>
+      <div class="t"><span class="ok">FIXED</span><span>empty cart message added</span></div>
+      <div class="t"><span class="ok">PASS</span><span>checkout flow</span></div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="mailto:lukejshua@gmail.com">Email me</a>
+      <a class="btn" href="#projects">See my projects</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a Computer Science student majoring in Software Engineering, with hands-on experience in Dart, Flutter, Java, and Python from academic and client projects. I design interfaces in Figma, and I'm most drawn to the QA side of development: testing, catching issues early, and making sure an app holds up before it reaches users.</p>
+    <p>I'm looking for a QA or Software Tester internship where attention to detail and a development background can add real value to a team. <strong>Available for academic internship / OJT starting December 2026.</strong></p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="proj">
+      <h3>MSEUF Wear</h3>
+      <p class="meta">Campus e-commerce mobile app (iOS) · 3rd year, 2nd sem · Academic project and freelance client delivery</p>
+      <ul>
+        <li>Designed and built an app for browsing and "shopping" MSEUF-branded university apparel.</li>
+        <li>Designed the UI/UX in Figma before implementation, with a focus on a clean, user-friendly interface.</li>
+        <li>Implemented core e-commerce features such as product browsing and the shopping flow.</li>
+        <li>Delivered a working build to a client for their academic requirement and confirmed requirements with them directly.</li>
+      </ul>
+      <div class="chips"><span class="chip">Dart</span><span class="chip">Flutter</span><span class="chip">Figma</span><span class="chip">Xcode</span></div>
+    </article>
+
+    <article class="proj">
+      <h3>Search-and-Rescue AI Robot</h3>
+      <p class="meta">Undergraduate thesis · In progress</p>
+      <ul>
+        <li>Building an RC car-style robot for disaster response that navigates narrow spaces in collapsed structures after an earthquake.</li>
+        <li>Uses an ESP32 microcontroller for hardware control and a Raspberry Pi for on-board AI processing.</li>
+        <li>Implementing real-time human detection with YOLOv8 to identify trapped individuals.</li>
+        <li>Developing a Flutter companion app to connect to and control the robot from a phone.</li>
+      </ul>
+      <div class="chips"><span class="chip">ESP32</span><span class="chip">Raspberry Pi</span><span class="chip">YOLOv8</span><span class="chip">Python</span><span class="chip">Flutter</span></div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>QA and testing</h3><p>Postman, Selenium</p></div>
+      <div><h3>Programming</h3><p>Java, Python, Dart, JavaScript</p></div>
+      <div><h3>Front-end and mobile</h3><p>Flutter, HTML</p></div>
+      <div><h3>Design</h3><p>Figma (UI/UX)</p></div>
+      <div><h3>Tools</h3><p>VS Code, Android Studio, Xcode</p></div>
+      <div><h3>Languages</h3><p>English, Filipino</p></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu">
+      <h3>BS Computer Science, major in Software Engineering</h3>
+      <p>Manuel S. Enverga University Foundation, Lucena City · 2023 to 2027 (expected)</p>
+      <p>Focus: Software Testing and QA, Mobile Development, Web Development, Human-Computer Interaction</p>
+    </div>
+    <div class="edu">
+      <h3>TVL – ICT (Computer and Network Technology)</h3>
+      <p>Quezon National High School, Senior High School</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Open to QA / Software Tester internships starting December 2026.</p>
+    <p><a href="mailto:lukejshua@gmail.com">lukejshua@gmail.com</a></p>
+    <p><a href="#" rel="noopener">LinkedIn</a> · <a href="#" rel="noopener">GitHub</a></p>
+  </section>
+
+  <footer>© 2026 Luke Joshua R. Cahinusayan</footer>
+</div>
+</body>
+</html>
